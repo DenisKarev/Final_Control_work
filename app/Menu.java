@@ -17,27 +17,17 @@ public class Menu {
 
     private void initMenus() {
         this.title0 = "Animal farm -- contains pet and pack animals!\n"; // i don't like word nursery for this project !
-        this.title1 = "Adding an animal\n Animals supported - Hamsters, cats, dogs, horses and donkeys\nOther types of animals can't be held at this farm!";
+        this.title1 = "Adding an animal\nAnimals supported - hamster, cat, dog, horse and donkey\n" +
+                        "Other types of animals can't be held at this farm!\n\n";
         this.title2 = "Add a skill to an animal:";
         this.menu0 = "1.\tShow all animals\n" +
                 "2.\tAdd a new animal.\n" +
                 "3.\tNew skill to an animal\n" +
                 "0.\tExit\nEnter your choice";
 
-        this.menu1 = "1.\tShow shop storage.\n" +
-                "2.\tAdd toy\n" +
-                "3.\tEdit toy drop rate\n" +
-                "4.\tTransfer toy(s) to Lottery.\n" +
-                "5.\tTransfer all toys to Lottery!!!\n" +
-                "0.\tPrevious menu\n" +
-                "Enter your choice:";
+        this.menu1 = "Please type a type of the animal to add: ";    // if interesting the google translate this correctly to russian ))
 
-        this.menu2 = "1.\tShow lottery storage.\n" +
-                "2.\tLaunch the LOTTERY!!\n" +
-                "3.\tEdit toy drop rate\n" +
-                "4.\tTransfer toy(s) back to Store.\n" +
-                "5.\tTransfer all toys back to Store!!!\n" +
-                "0.\tPrevious menu\n" +
+        this.menu2 = "Please enter the name of animal to add a new skill\n" +
                 "Enter your choice:";
     }
 
@@ -58,7 +48,7 @@ public class Menu {
     }
 
     public void errInput(int menu) {
-        System.out.println("Invalid input try again");
+        System.out.println("Invalid input. Back to menu.");
     }
 
     public void strOut(String string) {
@@ -86,12 +76,8 @@ public class Menu {
         }
     }
 
-    public void showAllAnimals(FarmData fd) {
+    public String inputString() {
+        return con.readLine();
     }
 
-    public void addAnimal(FarmData fd) {
-    }
-
-    public void skillForAnimal(FarmData fd) {
-    }
 }

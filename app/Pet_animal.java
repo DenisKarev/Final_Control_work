@@ -30,6 +30,6 @@ public class Pet_animal extends Animal implements Skills_for_animals {
 
     @Override
     public String toString() {
-        return String.format("%s\t%s\t%s\t%s", this.name, this.birth_date, "Pet!", this.skill);
+        return super.toString() +   "Pet\t" + this.skill;
     }
 }

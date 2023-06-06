@@ -5,4 +5,9 @@ public class Hamster extends Pet_animal {
         super(name, birthdate);
         this.skill = "Eat-Sleep-Breed";     // it's a hamsters ))) they only can do this
     }
+    
+    @Override
+    public String toString() {
+        return super.toString() + "\t\tHamster";
+    }
 }
